@@ -4547,48 +4547,30 @@ button {
   width: 95vw;
 }
 
-/* 3-Column Showcase Layout (Side Badges Middle Aligned, Guaranteed Zero Touching) */
-.hero-showcase-3col {
+/* Centerpiece Container with 4 Corner Top-to-Bottom Gliding Badges */
+.hero-centerpiece-container {
   width: 100%;
-  max-width: 1440px;
-  display: grid;
-  grid-template-columns: minmax(210px, 240px) 1fr minmax(210px, 240px);
-  align-items: center;
-  gap: 24px;
-  margin: 0 auto;
+  max-width: 960px;
   position: relative;
+  margin: 0 auto;
 }
 
-.hero-side-column {
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-  justify-content: center;
-  z-index: 10;
-}
-
-.hero-side-left {
-  align-items: flex-end;
-}
-
-.hero-side-right {
-  align-items: flex-start;
-}
-
-.hero-float-card {
+.hero-glide-badge {
+  position: absolute;
   border-radius: 50px;
-  padding: 0.85rem 1.35rem;
+  padding: 0.8rem 1.35rem;
   display: flex;
   align-items: center;
   gap: 0.75rem;
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   white-space: nowrap;
+  z-index: 20;
   transition: all 0.4s ease;
   width: max-content;
 }
 
-.hero-float-card .hero-float-icon {
+.hero-glide-badge .hero-float-icon {
   font-size: 1.4rem;
   line-height: 1;
   display: flex;
@@ -4600,7 +4582,7 @@ button {
   flex-shrink: 0;
 }
 
-.hero-float-card strong {
+.hero-glide-badge strong {
   display: block;
   font-size: 0.88rem;
   color: #ffffff;
@@ -4608,10 +4590,65 @@ button {
   line-height: 1.2;
 }
 
-.hero-float-card span {
+.hero-glide-badge span {
   font-size: 0.74rem;
   font-weight: 600;
   margin-top: 1px;
+}
+
+/* 4 Corner Positions (Outside Picture Border with Clear Spacing) */
+.glide-top-left {
+  top: 15px;
+  left: -220px;
+  animation: glideTopToBottom 7s infinite ease-in-out, rainbowBlinkGlow1 3s infinite linear;
+}
+
+.glide-bottom-left {
+  bottom: 120px;
+  left: -220px;
+  animation: glideBottomToTop 7s infinite ease-in-out, rainbowBlinkGlow2 3s infinite linear;
+}
+
+.glide-top-right {
+  top: 15px;
+  right: -220px;
+  animation: glideTopToBottom 7.5s infinite ease-in-out 0.5s, rainbowBlinkGlow3 3s infinite linear;
+}
+
+.glide-bottom-right {
+  bottom: 120px;
+  right: -220px;
+  animation: glideBottomToTop 7.5s infinite ease-in-out 0.5s, rainbowBlinkGlow4 3s infinite linear;
+}
+
+/* Pure Vertical Top-to-Bottom Gliding along Picture Height (Zero X movement) */
+@keyframes glideTopToBottom {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(420px);
+  }
+}
+
+@keyframes glideBottomToTop {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-420px);
+  }
+}
+
+@media (max-width: 1400px) {
+  .glide-top-left, .glide-bottom-left { left: -195px; }
+  .glide-top-right, .glide-bottom-right { right: -195px; }
+}
+
+@media (max-width: 1100px) {
+  .hero-glide-badge {
+    display: none;
+  }
 }
 
 .hero-centerpiece-wrap {
