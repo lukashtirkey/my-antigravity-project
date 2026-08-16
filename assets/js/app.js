@@ -259,13 +259,124 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (hash) {
       updateActiveNavLink(hash, theme);
+      triggerCategoryAudioPhrase(hash);
     }
 
     if (name && lastTriggeredCat !== name) {
       lastTriggeredCat = name;
       showCategoryWelcomeToast(name, icon, theme);
+      triggerCategoryAudioPhrase(name);
     }
   }
+
+  /* ────────────────────────────────
+     0.2 CATEGORY SPOKEN AUDIO ENGINE
+     Spoken Announcements:
+     - Overview -> "Overview page"
+     - Our Legacy -> "Our Legacy"
+     - Campus Hub -> "Campus Hub"
+     - Leadership -> "Leadership site"
+     - Skill Tracks -> "Skill Tracks"
+     - Apex Hub -> "Apex Hub"
+     - FAQ -> "FAQ"
+     - Connect -> "Connect"
+     - Support -> "Support"
+     - Enroll Free -> "Enroll Free page"
+  ──────────────────────────────── */
+  const categoryAudioPhrases = {
+    '#home': 'Overview page',
+    '#about': 'Our Legacy',
+    '#don-bosco-dashboard': 'Campus Hub',
+    '#infrastructure': 'Campus Hub',
+    '#team': 'Leadership site',
+    '#leadership': 'Leadership site',
+    '#courses': 'Skill Tracks',
+    '#skills': 'Skill Tracks',
+    '#excellence': 'Apex Hub',
+    '#apex-hub': 'Apex Hub',
+    '#research': 'Apex Hub',
+    '#faq': 'FAQ',
+    '#contact': 'Connect',
+    '#support': 'Support',
+    '#donate': 'Support',
+    '#register': 'Enroll Free page',
+    '#pathway-finder': 'Skill Pathway Finder'
+  };
+
+  let lastSpokenCategoryPhrase = '';
+
+  function speakCategoryPhrase(text) {
+    if (!text || !('speechSynthesis' in window)) return;
+    try {
+      window.speechSynthesis.cancel();
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = 'en-US';
+      utterance.rate = 0.95;
+      utterance.pitch = 1.05;
+      utterance.volume = 1.0;
+
+      const voices = window.speechSynthesis.getVoices();
+      const voice = voices.find(v => 
+        v.lang.startsWith('en') && 
+        (v.name.includes('Natural') || v.name.includes('Google') || v.name.includes('Samantha') || v.name.includes('Zira') || v.name.includes('David'))
+      ) || voices.find(v => v.lang.startsWith('en'));
+
+      if (voice) utterance.voice = voice;
+      window.speechSynthesis.speak(utterance);
+    } catch(e) {}
+  }
+
+  function triggerCategoryAudioPhrase(hashOrText) {
+    if (!hashOrText) return;
+    let phrase = '';
+    
+    if (categoryAudioPhrases[hashOrText]) {
+      phrase = categoryAudioPhrases[hashOrText];
+    } else {
+      const lower = String(hashOrText).toLowerCase().trim();
+      if (lower.includes('overview')) phrase = 'Overview page';
+      else if (lower.includes('our legacy') || lower.includes('legacy')) phrase = 'Our Legacy';
+      else if (lower.includes('campus hub') || lower.includes('campus')) phrase = 'Campus Hub';
+      else if (lower.includes('leadership')) phrase = 'Leadership site';
+      else if (lower.includes('skill tracks') || lower.includes('skill')) phrase = 'Skill Tracks';
+      else if (lower.includes('apex hub') || lower.includes('apex')) phrase = 'Apex Hub';
+      else if (lower.includes('faq')) phrase = 'FAQ';
+      else if (lower.includes('connect')) phrase = 'Connect';
+      else if (lower.includes('support')) phrase = 'Support';
+      else if (lower.includes('enroll free') || lower.includes('enroll') || lower.includes('register')) phrase = 'Enroll Free page';
+    }
+
+    if (phrase && phrase !== lastSpokenCategoryPhrase) {
+      lastSpokenCategoryPhrase = phrase;
+      speakCategoryPhrase(phrase);
+    }
+  }
+
+  window.triggerCategoryAudioPhrase = triggerCategoryAudioPhrase;
+
+  // Listen to all nav links, buttons, and drawer links
+  document.querySelectorAll('a, button').forEach(elem => {
+    elem.addEventListener('click', () => {
+      const href = elem.getAttribute('href');
+      const text = elem.textContent || '';
+
+      if (href && categoryAudioPhrases[href]) {
+        triggerCategoryAudioPhrase(href);
+      } else if (text) {
+        triggerCategoryAudioPhrase(text);
+      }
+    });
+  });
+
+  // Listen to typing in any input field
+  document.querySelectorAll('input, select, textarea').forEach(input => {
+    input.addEventListener('input', () => {
+      const val = input.value || '';
+      if (val.length >= 3) {
+        triggerCategoryAudioPhrase(val);
+      }
+    });
+  });
 
   // Listen to all nav links (Desktop & Mobile)
   document.querySelectorAll('a[href^="#"]').forEach(link => {
@@ -274,6 +385,8 @@ document.addEventListener('DOMContentLoaded', () => {
       if (href && categoryMap[href]) {
         const cat = categoryMap[href];
         handleCategoryTrigger(href, cat.name, cat.icon, cat);
+      } else if (href) {
+        triggerCategoryAudioPhrase(href);
       }
     });
   });
