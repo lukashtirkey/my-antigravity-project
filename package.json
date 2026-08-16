@@ -2,10 +2,10 @@
   "name": "dbsm-powerhouse-bangalore",
   "version": "2.1.0",
   "description": "Don Bosco Skill Mission Bangalore — Apex Centre of Excellence & Skill Empowerment Hub",
-  "main": "index.html",
+  "main": "server.js",
   "scripts": {
-    "dev": "npx serve -l 3000 .",
-    "start": "npx serve -l 3000 ."
+    "dev": "node server.js",
+    "start": "node server.js"
   },
   "keywords": [
     "DBSM",
