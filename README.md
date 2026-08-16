@@ -1,6 +1,6 @@
-# 🎓 Don Bosco Skill Mission Bangalore — Landing Page
+# 🎓 DBSM_Landing_Page_Bengaluru_Project — Don Bosco Skill Mission Bangalore
 
-A premium, fully responsive landing page for **Don Bosco Skill Mission Bangalore**.
+A premium, fully responsive landing page for **Don Bosco Skill Mission Bangalore (DBSM_Landing_Page_Bengaluru_Project)**.
 
 ## 📁 Project Structure
 
