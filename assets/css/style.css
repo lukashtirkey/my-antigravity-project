@@ -4482,6 +4482,44 @@ button {
   }
 }
 
+/* Hero Card Image Placeholder */
+.hero-card-img-placeholder {
+  width: 100%;
+  height: 220px;
+  background: linear-gradient(135deg, rgba(0, 158, 151, 0.2), rgba(10, 38, 36, 0.85));
+  border-bottom: 2px dashed rgba(45, 199, 191, 0.45);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+}
+
+.placeholder-icon {
+  font-size: 2.2rem;
+  animation: pulsePlaceholder 2s infinite ease-in-out;
+}
+
+.placeholder-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #2dc7bf;
+  letter-spacing: 0.5px;
+}
+
+.placeholder-sub {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+@keyframes pulsePlaceholder {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.15); opacity: 1; }
+}
+
 @media (max-width: 768px) {
   .welcome-toast-container {
     top: 75px;
