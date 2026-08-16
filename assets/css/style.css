@@ -4544,8 +4544,9 @@ button {
 
 .hero-big-img {
   width: 100%;
-  height: 540px;
+  height: 560px;
   object-fit: cover;
+  object-position: center top;
   border-bottom: 2.5px solid rgba(251, 191, 36, 0.6);
   transition: transform 0.5s ease;
 }
@@ -4576,9 +4577,79 @@ button {
   gap: 1.5rem;
 }
 
+/* Vertical Float Up & Down Motion Animations */
+.float-left-1 {
+  animation: floatMotionV1 3.5s infinite ease-in-out, rainbowBlinkGlow1 3s infinite linear;
+}
+
+.float-left-2 {
+  animation: floatMotionV2 4s infinite ease-in-out 0.5s, rainbowBlinkGlow2 3s infinite linear 0.75s;
+}
+
+.float-right-1 {
+  animation: floatMotionV1 3.8s infinite ease-in-out 0.25s, rainbowBlinkGlow3 3s infinite linear 1.5s;
+}
+
+.float-right-2 {
+  animation: floatMotionV2 4.2s infinite ease-in-out 0.75s, rainbowBlinkGlow4 3s infinite linear 2.25s;
+}
+
+@keyframes floatMotionV1 {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-24px); }
+}
+
+@keyframes floatMotionV2 {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(24px); }
+}
+
+/* Dynamic Blinking Colors (Red, Emerald Green, Neon Blue, Pure White, Gold Yellow, Amethyst Purple) */
+@keyframes rainbowBlinkGlow1 {
+  0%   { border-color: #ff0055; box-shadow: 0 0 22px rgba(255, 0, 85, 0.85); }
+  20%  { border-color: #00e676; box-shadow: 0 0 22px rgba(0, 230, 118, 0.85); }
+  40%  { border-color: #00e5ff; box-shadow: 0 0 22px rgba(0, 229, 255, 0.85); }
+  60%  { border-color: #ffffff; box-shadow: 0 0 25px rgba(255, 255, 255, 0.95); }
+  80%  { border-color: #ffea00; box-shadow: 0 0 22px rgba(255, 234, 0, 0.85); }
+  100% { border-color: #ff0055; box-shadow: 0 0 22px rgba(255, 0, 85, 0.85); }
+}
+
+@keyframes rainbowBlinkGlow2 {
+  0%   { border-color: #00e5ff; box-shadow: 0 0 22px rgba(0, 229, 255, 0.85); }
+  20%  { border-color: #ffea00; box-shadow: 0 0 22px rgba(255, 234, 0, 0.85); }
+  40%  { border-color: #ff0055; box-shadow: 0 0 22px rgba(255, 0, 85, 0.85); }
+  60%  { border-color: #00e676; box-shadow: 0 0 22px rgba(0, 230, 118, 0.85); }
+  80%  { border-color: #9d4edd; box-shadow: 0 0 22px rgba(157, 78, 221, 0.85); }
+  100% { border-color: #00e5ff; box-shadow: 0 0 22px rgba(0, 229, 255, 0.85); }
+}
+
+@keyframes rainbowBlinkGlow3 {
+  0%   { border-color: #00e676; box-shadow: 0 0 22px rgba(0, 230, 118, 0.85); }
+  20%  { border-color: #9d4edd; box-shadow: 0 0 22px rgba(157, 78, 221, 0.85); }
+  40%  { border-color: #ffea00; box-shadow: 0 0 22px rgba(255, 234, 0, 0.85); }
+  60%  { border-color: #ff0055; box-shadow: 0 0 22px rgba(255, 0, 85, 0.85); }
+  80%  { border-color: #00e5ff; box-shadow: 0 0 22px rgba(0, 229, 255, 0.85); }
+  100% { border-color: #00e676; box-shadow: 0 0 22px rgba(0, 230, 118, 0.85); }
+}
+
+@keyframes rainbowBlinkGlow4 {
+  0%   { border-color: #ffea00; box-shadow: 0 0 22px rgba(255, 234, 0, 0.85); }
+  20%  { border-color: #ff0055; box-shadow: 0 0 22px rgba(255, 0, 85, 0.85); }
+  40%  { border-color: #9d4edd; box-shadow: 0 0 22px rgba(157, 78, 221, 0.85); }
+  60%  { border-color: #00e5ff; box-shadow: 0 0 22px rgba(0, 229, 255, 0.85); }
+  80%  { border-color: #00e676; box-shadow: 0 0 22px rgba(0, 230, 118, 0.85); }
+  100% { border-color: #ffea00; box-shadow: 0 0 22px rgba(255, 234, 0, 0.85); }
+}
+
+/* Inner Pill Blinking Animations */
+.hero-pill--blink1 { animation: rainbowBlinkGlow1 3s infinite linear; }
+.hero-pill--blink2 { animation: rainbowBlinkGlow2 3s infinite linear; }
+.hero-pill--blink3 { animation: rainbowBlinkGlow3 3s infinite linear; }
+.hero-pill--blink4 { animation: rainbowBlinkGlow4 3s infinite linear; }
+
 @media (max-width: 992px) {
   .hero-big-img {
-    height: 380px;
+    height: 420px;
   }
   .hero-float {
     display: none;
