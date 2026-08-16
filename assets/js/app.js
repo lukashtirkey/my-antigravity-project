@@ -6,7 +6,63 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   /* ────────────────────────────────
-     0. DYNAMIC CATEGORY WELCOME TOAST NOTIFICATION
+     0. AUDIO VOICE RECORDING WELCOME SYSTEM
+     Announces: "Welcome to the Don Bosco Skill Mission, Bengaluru!"
+  ──────────────────────────────── */
+  function playVoiceWelcome() {
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.cancel(); // Reset active queue
+
+      const welcomeUtterance = new SpeechSynthesisUtterance("Welcome to the Don Bosco Skill Mission, Bengaluru!");
+      welcomeUtterance.lang = 'en-US';
+      welcomeUtterance.rate = 0.92;
+      welcomeUtterance.pitch = 1.05;
+      welcomeUtterance.volume = 1.0;
+
+      // Select natural English voice if available
+      const voices = window.speechSynthesis.getVoices();
+      const preferredVoice = voices.find(v => 
+        v.lang.startsWith('en') && 
+        (v.name.includes('Natural') || v.name.includes('Google') || v.name.includes('Samantha') || v.name.includes('Zira') || v.name.includes('David') || v.name.includes('Alex'))
+      ) || voices.find(v => v.lang.startsWith('en'));
+
+      if (preferredVoice) {
+        welcomeUtterance.voice = preferredVoice;
+      }
+
+      window.speechSynthesis.speak(welcomeUtterance);
+    }
+  }
+
+  let hasVoiceWelcomed = false;
+
+  function handleFirstUserVoiceWelcome() {
+    if (hasVoiceWelcomed) return;
+    hasVoiceWelcomed = true;
+    playVoiceWelcome();
+
+    ['click', 'touchstart', 'pointerdown', 'keydown', 'scroll'].forEach(evt => {
+      document.removeEventListener(evt, handleFirstUserVoiceWelcome);
+    });
+  }
+
+  // Attempt immediate voice welcome playback on load
+  setTimeout(() => {
+    try {
+      playVoiceWelcome();
+    } catch (e) {}
+  }, 400);
+
+  // Attach fallback interaction listeners to handle browser autoplay policies seamlessly
+  ['click', 'touchstart', 'pointerdown', 'keydown', 'scroll'].forEach(evt => {
+    document.addEventListener(evt, handleFirstUserVoiceWelcome, { once: true });
+  });
+
+  // Expose function globally for UI buttons
+  window.playVoiceWelcome = playVoiceWelcome;
+
+  /* ────────────────────────────────
+     0.1 DYNAMIC CATEGORY WELCOME TOAST NOTIFICATION
   ──────────────────────────────── */
   let toastContainer = document.querySelector('.welcome-toast-container');
   if (!toastContainer) {
