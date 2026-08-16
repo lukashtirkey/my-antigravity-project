@@ -79,6 +79,15 @@ document.addEventListener('DOMContentLoaded', () => {
       border: 'rgba(45, 199, 191, 0.55)',
       glow: 'rgba(0, 158, 151, 0.4)'
     },
+    '#don-bosco-dashboard': {
+      name: 'Don Bosco Legacy Dashboard',
+      icon: '👑',
+      primary: '#d97706',
+      accent: '#fbbf24',
+      bg: 'rgba(38, 26, 10, 0.94)',
+      border: 'rgba(251, 191, 36, 0.65)',
+      glow: 'rgba(251, 191, 36, 0.4)'
+    },
     '#about': {
       name: 'Our Legacy',
       icon: '🏛️',
