@@ -4264,6 +4264,19 @@ button {
   margin: 0 auto;
 }
 
+/* Centered Single Card Wrapper */
+.db-dashboard-single-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+.db-dashboard-single-wrap .db-card--center {
+  width: 100%;
+}
+
 /* 5-Column Symmetrical Dashboard Grid */
 .db-dashboard-grid {
   display: grid;
