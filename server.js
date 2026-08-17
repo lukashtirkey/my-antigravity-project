@@ -72,5 +72,12 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(PORT, () => {
+  console.log(`============================================================`);
   console.log(`🚀 DBSM Server running on port ${PORT}`);
+  console.log(`📍 Local URL:         http://localhost:${PORT}`);
+  console.log(`🐙 GitHub Repo:        https://github.com/lukashtirkey/my-antigravity-project`);
+  console.log(`☁️ Render Dashboard:   https://dashboard.render.com`);
+  console.log(`🌐 Live Render App:    https://dbsm-powerhouse-bangalore.onrender.com`);
+  console.log(`============================================================`);
 });
+

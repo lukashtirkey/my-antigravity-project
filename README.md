@@ -19,11 +19,25 @@ DBSM-PowerHouse-Bangalore/
         └── testimonial_students.png
 ```
 
-## 🚀 How to Open
+## 🔗 GitHub & Render Links
 
-Simply double-click `index.html` — no server needed.
+- 🐙 **GitHub Repository**: [https://github.com/lukashtirkey/my-antigravity-project](https://github.com/lukashtirkey/my-antigravity-project)
+- 👤 **GitHub Profile**: [https://github.com/Lukash-Tirkey](https://github.com/Lukash-Tirkey)
+- ☁️ **Render Dashboard**: [https://dashboard.render.com](https://dashboard.render.com)
+- 🚀 **Render Live App URL**: [https://dbsm-powerhouse-bangalore.onrender.com](https://dbsm-powerhouse-bangalore.onrender.com)
 
-Or open in browser via:
+## 🚀 How to Run
+
+Run locally using Node.js static server:
+```bash
+npm start
+# or
+node server.js
+```
+Then access at: [http://localhost:3000](http://localhost:3000)
+
+Or open directly in browser:
 ```
 file:///c:/DBSM-PowerHouse-Bangalore/index.html
 ```
+
