@@ -19,11 +19,22 @@ DBSM-PowerHouse-Bangalore/
         └── testimonial_students.png
 ```
 
+## 💼 Ready for LinkedIn & Social Sharing
+
+Here are your official live links to copy & post directly to LinkedIn, portfolios, or resumes:
+
+- 🌐 **Live Web Application**: [https://lukashtirkey.github.io/my-antigravity-project/](https://lukashtirkey.github.io/my-antigravity-project/)
+- 🐙 **GitHub Source Code**: [https://github.com/lukashtirkey/my-antigravity-project](https://github.com/lukashtirkey/my-antigravity-project)
+- ⚡ **Render 1-Click Live Deploy**: [https://render.com/deploy?repo=https://github.com/lukashtirkey/my-antigravity-project](https://render.com/deploy?repo=https://github.com/lukashtirkey/my-antigravity-project)
+- ☁️ **Render Dashboard**: [https://dashboard.render.com](https://dashboard.render.com)
+
+---
+
 ## 🚀 1-Click Live Deployment to Render
 
 [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/lukashtirkey/my-antigravity-project)
 
-Click the button above to deploy this web application live on Render in 1-click!
+Click the button above to launch this application live on Render instantly!
 
 ## 🔗 Repository & Live Deployment Links
 
