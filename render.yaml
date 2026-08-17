@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: dbsm-powerhouse-bangalore
+    runtime: node
+    buildCommand: npm install
+    startCommand: node server.js
+    plan: free
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: 20.0.0
