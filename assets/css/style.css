@@ -4,7 +4,7 @@
    style.css  v2.0
    ==================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Poppins:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,700&display=swap');
 
 /* ── TOKENS ── */
 :root {
@@ -5149,4 +5149,381 @@ button {
     min-width: unset;
     width: 100%;
   }
+}
+
+/* ====================================================
+   SECTION-SPECIFIC UNIQUE TYPOGRAPHY & LEGIBILITY SYSTEM
+   ==================================================== */
+
+/* 1. OVERVIEW / HERO SECTION (#home) */
+#home {
+  font-family: 'Outfit', sans-serif !important;
+}
+#home .hero-overline {
+  font-family: 'Outfit', sans-serif !important;
+  color: #facc15 !important; /* Bright Gold */
+  font-weight: 800 !important;
+  letter-spacing: 0.14em;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.85);
+}
+#home .hero-heading {
+  font-family: 'Outfit', sans-serif !important;
+  font-weight: 900 !important;
+  color: #ffffff !important;
+  text-shadow: 0 3px 12px rgba(0,0,0,0.95);
+}
+#home .hero-heading em {
+  color: #38bdf8 !important; /* Vivid Electric Blue */
+  font-style: normal;
+  text-shadow: 0 0 20px rgba(56,189,248,0.7);
+}
+#home .hero-card-title {
+  color: #ffffff !important;
+  font-family: 'Outfit', sans-serif !important;
+  font-weight: 800 !important;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.85);
+}
+#home .hero-card-desc {
+  color: #f1f5f9 !important; /* Bright Slate White */
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+  line-height: 1.65 !important;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.85);
+}
+#home .hero-sub {
+  color: #f8fafc !important; /* Pure Slate White */
+  font-size: 1.2rem !important;
+  font-weight: 600 !important;
+  line-height: 1.7 !important;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.9);
+}
+#home .hero-kpi strong {
+  color: #facc15 !important;
+  text-shadow: 0 0 15px rgba(250,204,21,0.5);
+}
+#home .hero-kpi span {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+/* 2. DON BOSCO SANCTUARY & OUR LEGACY (#don-bosco-dashboard, #about) */
+#don-bosco-dashboard, #about {
+  font-family: 'Playfair Display', 'Cinzel', serif !important;
+}
+#don-bosco-dashboard .db-dashboard-title,
+#about .don-bosco-title,
+#about .about-visual h3 {
+  font-family: 'Cinzel', serif !important;
+  font-weight: 800 !important;
+  color: #ffffff !important;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.75);
+}
+#don-bosco-dashboard .db-dashboard-title em,
+#about h2 em {
+  font-family: 'Playfair Display', serif !important;
+  color: #fb923c !important; /* Warm Saffron Gold */
+  font-style: italic;
+}
+#don-bosco-dashboard .db-dashboard-subtitle,
+#about .body-text,
+#about .about-lead {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  color: #f1f5f9 !important;
+  font-size: 1.1rem !important;
+  font-weight: 500 !important;
+  line-height: 1.75 !important;
+}
+#don-bosco-dashboard .db-center-name {
+  font-family: 'Cinzel', serif !important;
+  color: #facc15 !important;
+  font-weight: 800 !important;
+}
+#don-bosco-dashboard .db-center-quote,
+#about .don-bosco-quote {
+  font-family: 'Playfair Display', serif !important;
+  color: #fef08a !important; /* Golden Cream Quote */
+  font-style: italic !important;
+  font-size: 1.15rem !important;
+  font-weight: 600 !important;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.65);
+}
+.db-card-title, .db-card-desc {
+  color: #ffffff !important;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.7);
+}
+
+/* 3. SKILL TRACKS & FREE RESIDENTIAL COURSES (#courses) */
+#courses {
+  font-family: 'Outfit', sans-serif !important;
+}
+#courses .h2 {
+  font-family: 'Outfit', sans-serif !important;
+  font-weight: 800 !important;
+  color: #0f172a !important;
+}
+#courses .h2 em {
+  color: #e55d1a !important; /* High Visibility Saffron */
+  font-style: normal;
+}
+#courses .body-text {
+  color: #334155 !important;
+  font-weight: 500 !important;
+  font-size: 1.08rem !important;
+}
+#courses .course-card {
+  background: #ffffff !important;
+  border: 1.5px solid #cbd5e1 !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08) !important;
+}
+#courses .course-title {
+  font-family: 'Outfit', sans-serif !important;
+  color: #0f172a !important;
+  font-weight: 800 !important;
+  font-size: 1.35rem !important;
+}
+#courses .course-desc {
+  color: #334155 !important;
+  font-weight: 500 !important;
+  line-height: 1.65 !important;
+  font-size: 0.98rem !important;
+}
+#courses .course-pill {
+  font-weight: 700 !important;
+  font-size: 0.82rem !important;
+}
+#courses .course-pill--free {
+  background: #dcfce7 !important;
+  color: #15803d !important;
+}
+#courses .course-pill--job {
+  background: #fef3c7 !important;
+  color: #b45309 !important;
+}
+
+/* 4. APEX HUB & BENCHMARKING EXCELLENCE (#excellence) */
+#excellence {
+  font-family: 'Space Grotesk', sans-serif !important;
+  background: linear-gradient(135deg, #002827 0%, #031e2d 100%) !important;
+}
+#excellence .h2 {
+  font-family: 'Space Grotesk', sans-serif !important;
+  color: #ffffff !important;
+  font-weight: 800 !important;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.85);
+}
+#excellence .body-text {
+  color: #e2e8f0 !important;
+  font-size: 1.1rem !important;
+  font-weight: 500 !important;
+  line-height: 1.75 !important;
+}
+
+/* 5. RECENT MILESTONES & ACTIVITIES (#events) */
+#events {
+  font-family: 'Poppins', sans-serif !important;
+}
+#events .h2 {
+  font-family: 'Poppins', sans-serif !important;
+  color: #0f172a !important;
+  font-weight: 800 !important;
+}
+#events .event-card-title {
+  color: #0f172a !important;
+  font-weight: 700 !important;
+  font-size: 1.15rem !important;
+}
+#events .event-card-desc {
+  color: #334155 !important;
+  font-weight: 500 !important;
+  font-size: 0.95rem !important;
+  line-height: 1.65 !important;
+}
+
+/* 6. CAMPUS HUB INFRASTRUCTURE & GALLERY (#infrastructure, #gallery) */
+#infrastructure, #gallery {
+  font-family: 'Space Grotesk', sans-serif !important;
+}
+#infrastructure .h2, #gallery .h2 {
+  font-family: 'Space Grotesk', sans-serif !important;
+  color: #ffffff !important;
+  font-weight: 800 !important;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.85);
+}
+#infrastructure .h2 em {
+  color: #38bdf8 !important; /* Cyber Aqua */
+}
+#infrastructure .body-text, #gallery .body-text {
+  color: #f1f5f9 !important;
+  font-size: 1.12rem !important;
+  font-weight: 500 !important;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.8);
+}
+#infrastructure .infra-card-title {
+  color: #00f2fe !important;
+  font-weight: 700 !important;
+  font-size: 1.2rem !important;
+}
+#infrastructure .infra-card-desc {
+  color: #e2e8f0 !important;
+  font-weight: 500 !important;
+  font-size: 0.96rem !important;
+  line-height: 1.65 !important;
+}
+#gallery .gallery-overlay h4 {
+  color: #ffffff !important;
+  font-family: 'Space Grotesk', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 1.15rem !important;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.9);
+}
+#gallery .gallery-overlay p {
+  color: #38bdf8 !important;
+  font-weight: 600 !important;
+}
+#gallery .gallery-tag {
+  font-weight: 700 !important;
+  background: rgba(15, 23, 42, 0.9) !important;
+  color: #facc15 !important;
+  border: 1px solid rgba(250, 204, 21, 0.4) !important;
+}
+
+/* 7. PLACEMENTS & HIRING PARTNERS (#placements) */
+#placements {
+  font-family: 'Outfit', sans-serif !important;
+  background: #f8fafc !important;
+}
+#placements .h2 {
+  font-family: 'Outfit', sans-serif !important;
+  color: #0f172a !important;
+  font-weight: 800 !important;
+}
+#placements .h2 em {
+  color: #007a75 !important;
+}
+#placements .body-text {
+  color: #334155 !important;
+  font-weight: 500 !important;
+}
+
+/* 8. STUDENT TESTIMONIALS & TRANSFORMATIONS (#testimonials) */
+#testimonials {
+  font-family: 'Poppins', sans-serif !important;
+  background: #ffffff !important;
+}
+#testimonials .h2 {
+  font-family: 'Poppins', sans-serif !important;
+  color: #0f172a !important;
+  font-weight: 800 !important;
+}
+#testimonials .h2 em {
+  color: #009e97 !important;
+}
+
+/* 9. LEADERSHIP & STAFF DIRECTORY (#team) */
+#team {
+  font-family: 'Poppins', sans-serif !important;
+  background: #091328 !important; /* Deep Executive Navy */
+}
+#team .h2 {
+  font-family: 'Poppins', sans-serif !important;
+  color: #ffffff !important;
+  font-weight: 800 !important;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+}
+#team .h2 em {
+  color: #34d399 !important; /* Executive Mint Emerald */
+}
+#team .body-text {
+  color: #cbd5e1 !important;
+  font-weight: 500 !important;
+  font-size: 1.1rem !important;
+}
+#team .staff-card {
+  background: #0f1c3f !important;
+  border: 1px solid rgba(52, 211, 153, 0.35) !important;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.35) !important;
+}
+#team .staff-name {
+  color: #ffffff !important;
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 800 !important;
+  font-size: 1.25rem !important;
+}
+#team .staff-role {
+  color: #38bdf8 !important;
+  font-weight: 600 !important;
+  font-size: 0.95rem !important;
+}
+#team .staff-detail {
+  color: #e2e8f0 !important;
+  font-weight: 500 !important;
+  font-size: 0.92rem !important;
+}
+#team .staff-phone {
+  color: #facc15 !important;
+  font-weight: 700 !important;
+  font-size: 1rem !important;
+}
+
+/* 10. FREQUENTLY ASKED QUESTIONS (#faq) */
+#faq {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  background: #f1f5f9 !important;
+}
+#faq .h2 {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  color: #0f172a !important;
+  font-weight: 800 !important;
+}
+
+/* 11. REGISTRATION ADMISSIONS FORM (#register) */
+#register {
+  font-family: 'Outfit', sans-serif !important;
+  background: linear-gradient(135deg, #0f172a 0%, #002827 100%) !important;
+}
+#register .h2 {
+  font-family: 'Outfit', sans-serif !important;
+  color: #ffffff !important;
+  font-weight: 800 !important;
+}
+#register .h2 em {
+  color: #38bdf8 !important;
+}
+#register label {
+  color: #f1f5f9 !important;
+  font-weight: 700 !important;
+  font-size: 0.95rem !important;
+}
+#register input, #register select, #register textarea {
+  background: rgba(15, 23, 42, 0.9) !important;
+  color: #ffffff !important;
+  border: 1.5px solid rgba(56, 189, 248, 0.4) !important;
+  font-weight: 500 !important;
+  font-size: 1rem !important;
+}
+#register input::placeholder, #register textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+/* 12. CONNECT & FOOTER (#contact, #footer) */
+#contact, #footer {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+#contact .contact-heading {
+  color: #0f172a !important;
+  font-weight: 800 !important;
+}
+#footer {
+  background: #021312 !important;
+}
+#footer h4 {
+  color: #facc15 !important;
+  font-weight: 700 !important;
+}
+#footer p, #footer a {
+  color: #cbd5e1 !important;
+  font-weight: 500 !important;
+}
+#footer a:hover {
+  color: #38bdf8 !important;
 }
