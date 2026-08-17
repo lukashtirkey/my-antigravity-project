@@ -19,12 +19,20 @@ DBSM-PowerHouse-Bangalore/
         └── testimonial_students.png
 ```
 
-## 🔗 GitHub & Render Links
+## 🚀 1-Click Live Deployment to Render
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/lukashtirkey/my-antigravity-project)
+
+Click the button above to deploy this web application live on Render in 1-click!
+
+## 🔗 Repository & Live Deployment Links
 
 - 🐙 **GitHub Repository**: [https://github.com/lukashtirkey/my-antigravity-project](https://github.com/lukashtirkey/my-antigravity-project)
 - 👤 **GitHub Profile**: [https://github.com/Lukash-Tirkey](https://github.com/Lukash-Tirkey)
-- ☁️ **Render Dashboard**: [https://dashboard.render.com](https://dashboard.render.com)
-- 🚀 **Render Live App URL**: [https://dbsm-powerhouse-bangalore.onrender.com](https://dbsm-powerhouse-bangalore.onrender.com)
+- ⚡ **Render 1-Click Deploy**: [https://render.com/deploy?repo=https://github.com/lukashtirkey/my-antigravity-project](https://render.com/deploy?repo=https://github.com/lukashtirkey/my-antigravity-project)
+- ☁️ **Render Cloud Dashboard**: [https://dashboard.render.com](https://dashboard.render.com)
+- 🌐 **GitHub Pages Live App**: [https://lukashtirkey.github.io/my-antigravity-project/](https://lukashtirkey.github.io/my-antigravity-project/)
+- 🚀 **Render Live App URL**: [https://my-antigravity-project.onrender.com](https://my-antigravity-project.onrender.com)
 
 ## 🚀 How to Run
 

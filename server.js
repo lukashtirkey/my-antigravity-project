@@ -74,10 +74,11 @@ const server = http.createServer((req, res) => {
 server.listen(PORT, () => {
   console.log(`============================================================`);
   console.log(`🚀 DBSM Server running on port ${PORT}`);
-  console.log(`📍 Local URL:         http://localhost:${PORT}`);
-  console.log(`🐙 GitHub Repo:        https://github.com/lukashtirkey/my-antigravity-project`);
-  console.log(`☁️ Render Dashboard:   https://dashboard.render.com`);
-  console.log(`🌐 Live Render App:    https://dbsm-powerhouse-bangalore.onrender.com`);
+  console.log(`📍 Local URL:            http://localhost:${PORT}`);
+  console.log(`🐙 GitHub Repo:           https://github.com/lukashtirkey/my-antigravity-project`);
+  console.log(`⚡ Render 1-Click Deploy: https://render.com/deploy?repo=https://github.com/lukashtirkey/my-antigravity-project`);
+  console.log(`☁️ Render Dashboard:      https://dashboard.render.com`);
+  console.log(`🌐 GitHub Pages Live:     https://lukashtirkey.github.io/my-antigravity-project/`);
   console.log(`============================================================`);
 });
 
